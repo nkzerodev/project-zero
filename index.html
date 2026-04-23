@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Bóveda de Juegos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="lava-background">
+        <div class="blob blob1"></div>
+        <div class="blob blob2"></div>
+        <div class="blob blob3"></div>
+    </div>
+
+    <div class="content-wrapper">
+        <header class="glass-header">
+            <div class="header-content">
+                <h1>Game Vault</h1>
+                <p>Explora, descubre y descarga mi colección personal.</p>
+            </div>
+        </header>
+
+        <div class="search-container">
+            <div class="search-box glass-effect">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="searchInput" placeholder="Buscar juego por nombre...">
+            </div>
+        </div>
+
+        <main id="games-grid" class="games-grid">
+            </main>
+    </div>
+
+    <div id="gameModal" class="modal">
+        <div class="modal-content glass-effect">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <img id="modalImg" src="" alt="Portada">
+            <h2 id="modalTitle">Título</h2>
+            <div class="modal-tags">
+                <span id="modalYear" class="glass-tag"></span>
+                <span id="modalSize" class="glass-tag"></span>
+                <span id="modalCategory" class="glass-tag"></span>
+            </div>
+            <p id="modalDesc">Descripción...</p>
+            <a id="modalDownload" href="#" target="_blank" class="glass-btn btn-primary">
+                <i class="fa-brands fa-telegram"></i> Descargar
+            </a>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script src="script.js"></script>
+</body>
+</html>
