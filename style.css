@@ -137,3 +137,16 @@ body {
     .header-content h1 { font-size: 1.5rem; }
     .games-grid { grid-template-columns: 1fr; }
 }
+
+/* --- Admin ---  */
+.admin-input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px;
+    color: white;
+    outline: none;
+}
+.admin-input:focus { border-color: #8b5cf6; }
