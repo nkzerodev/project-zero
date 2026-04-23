@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin | Project-Zero</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body class="admin-page">
+    <div class="lava-background">
+        <div class="blob blob1"></div>
+        <div class="blob blob2"></div>
+    </div>
+
+    <div class="content-wrapper">
+        <header class="glass-header" style="width: 150px; height: 150px; margin-top: 20px;">
+            <h1>PZ</h1>
+        </header>
+
+        <div id="login-section" class="glass-effect" style="max-width: 400px; margin: 40px auto; padding: 30px;">
+            <h2 style="text-align: center; margin-bottom: 20px;">Acceso Admin</h2>
+            <input type="email" id="email" placeholder="Correo" class="admin-input">
+            <input type="password" id="password" placeholder="Contraseña" class="admin-input">
+            <button onclick="login()" class="glass-btn btn-primary" style="width: 100%; margin-top: 20px;">Entrar</button>
+        </div>
+
+        <div id="admin-panel" style="display: none; max-width: 600px; margin: 0 auto;" class="glass-effect">
+            <h2 style="text-align: center; padding: 20px;">Nuevo Videojuego</h2>
+            <form id="game-form" style="padding: 20px;">
+                <input type="text" id="name" placeholder="Nombre del Juego" class="admin-input" required>
+                <textarea id="description" placeholder="Descripción" class="admin-input" required></textarea>
+                <input type="text" id="imagen_url" placeholder="URL de la Imagen" class="admin-input" required>
+                <input type="text" id="id_telegram" placeholder="ID de Telegram (ej: ff_01)" class="admin-input" required>
+                <input type="text" id="categoria" placeholder="Categoría" class="admin-input">
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                    <input type="number" id="anio" placeholder="Año" class="admin-input">
+                    <input type="text" id="peso" placeholder="Peso (ej: 1.5 GB)" class="admin-input">
+                </div>
+
+                <button type="submit" class="glass-btn btn-primary" style="width: 100%; margin-top: 20px;">Subir a Project-Zero</button>
+                <button type="button" onclick="logout()" class="glass-btn" style="width: 100%; margin-top: 10px; background: rgba(255,0,0,0.2);">Cerrar Sesión</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>
