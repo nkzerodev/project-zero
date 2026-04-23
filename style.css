@@ -138,7 +138,6 @@ body {
     .games-grid { grid-template-columns: 1fr; }
 }
 
-/* --- Admin ---  */
 .admin-input {
     width: 100%;
     padding: 12px;
